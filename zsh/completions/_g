@@ -1,2 +1,4 @@
 # g コマンドを git コマンドだと認識させる
 compdef g=git
+
+# vim:set ft=zsh:
