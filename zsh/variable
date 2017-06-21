@@ -2,6 +2,7 @@
 # 環境変数 #
 ############
 
-
+PATH="$HOME/.bin:$HOME/Developer/bin:.git/safe/../../bin:/usr/local/sbin:$PATH"
+export -U PATH
 
 # vim:set ft=zsh:
