@@ -1,14 +1,10 @@
 ZDOTDIR=~/.zsh
 
-for function in ~/.zsh/functions/*; do
-  source $function
+directories=(functions configs completions)
+for directory in $directories; do
+	for _zsh in ~/.zsh/$directory/*; do
+		source $_zsh
+	done
 done
-source $ZDOTDIR/basic
-source $ZDOTDIR/history
-source $ZDOTDIR/complement
-source $ZDOTDIR/prompt
-source $ZDOTDIR/anyenv
-source $ZDOTDIR/alias
-source $ZDOTDIR/variable
 
 # vim:set ft=zsh:
