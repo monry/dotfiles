@@ -1,0 +1,7 @@
+Include conf.d/hosts/*
+
+Host *
+    ServerAliveInterval 30
+    ForwardAgent yes
+
+# vim:set ft=sshconfig:
