@@ -3,3 +3,15 @@
 	name = Tetsuya Mori
 [core]
 	editor = vim
+	precomposeunicode = true
+	excludesfile = ~/.gitignore_global
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	s = status
+	i = "commit --allow-empty -v"
+	c = checkout
+	b = branch
+
