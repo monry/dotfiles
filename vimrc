@@ -10,6 +10,8 @@ set ruler
 set showcmd
 set incsearch
 set laststatus=2
+set modeline
+set modelines=5
 
 " Syntax highlight
 syntax on
