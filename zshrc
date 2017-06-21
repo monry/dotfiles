@@ -7,5 +7,8 @@ source $ZDOTDIR/prompt
 source $ZDOTDIR/anyenv
 source $ZDOTDIR/alias
 source $ZDOTDIR/variables
+for function in ~/.zsh/functions/*; do
+  source $function
+done
 
 # vim:set ft=zsh:
