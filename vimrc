@@ -24,15 +24,8 @@ set expandtab
 
 " 改行などの不可視文字を表示
 set list listchars=tab:»·,trail:-,eol:↲,extends:»,precedes:«,nbsp:·
-" 全角スペース対応
-function! ActivateInvisibleIndicator()
-	syntax match InvisibleJISX0208Space "　" display containedin=ALL
-	highlight InvisibleJISX0208Space term=underline ctermbg=Blue guibg=darkgray gui=underline
-endfunction
-augroup invisible
-	autocmd! invisible
-	autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
-augroup END
+highlight SpecialKey ctermfg=240 guibg=NONE guifg=#585858
+highlight NonText ctermfg=66 guibg=NONE guifg=#5f8787
 
 " 行連結時にスペースを入れない
 set nojoinspaces
