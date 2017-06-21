@@ -34,4 +34,13 @@ augroup invisible
 	autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
 augroup END
 
+" 行連結時にスペースを入れない
+set nojoinspaces
+
+" 行番号表示
+set number
+
+" キーバインド
+map J gJ
+
 " vim:set ft=vimrc:
