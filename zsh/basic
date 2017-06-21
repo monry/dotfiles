@@ -1,0 +1,26 @@
+############
+# 基本設定 #
+############
+
+# 環境変数  
+export LANG=ja_JP.UTF-8  
+
+# Homebrew のパスとかを追加
+path=(~/bin(N-/) /usr/local/bin(N-/) ${path})  
+
+# 色を使用出来るようにする  
+autoload -Uz colors
+colors
+
+# emacs 風キーバインドにする
+bindkey -e
+
+# ディレクトリ履歴を保存
+setopt auto_pushd
+setopt pushd_minus
+setopt pushd_ignore_dups
+
+# バックグラウンドジョブが終了したらすぐに知らせる
+setopt no_tify
+
+# vim:set ft=zsh:

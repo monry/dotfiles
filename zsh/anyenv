@@ -1,0 +1,11 @@
+##########
+# anyenv #
+##########
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
+# vim:set ft=zsh:

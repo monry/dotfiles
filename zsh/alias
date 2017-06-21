@@ -1,0 +1,8 @@
+##############
+# エイリアス #
+##############
+
+alias ll='ls -lahG'
+alias vi='vim'
+
+# vim:set ft=zsh:
