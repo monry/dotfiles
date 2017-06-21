@@ -1,0 +1,5 @@
+function _ssh_hosts {
+    compadd `egrep 'Host [^*]' ~/.ssh/**/*(^/) | awk '{print $2}'`;
+}
+
+# vim:set ft=zsh:
