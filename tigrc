@@ -5,15 +5,37 @@ bind generic G none
 bind generic g move-first-line
 bind generic G move-last-line
 
-# refs ビューで N で git branch
-bind refs N !git branch %(prompt) %(branch)
+# refs ビューで N で git branch, C で git checkout
+bind refs N !git branch "%(prompt Enter branch name: )" %(branch)
+bind refs C !git checkout %(branch)
 
 # main ビューで N で git branch
-bind main N !git branch %(prompt) %(commit)
+bind main N !git branch "%(prompt Enter branch name: )" %(commit)
+bind main C !git checkout -b "%(prompt Enter branch name: )" %(commit)
 
 # main ビューと status ビューで v で git commit
 bind main V !git commit -v --allow-empty
 bind status V !git commit -v --allow-empty
+
+# ; で GitHub の該当コミットを開く ※要 hub インストール
+bind main    ;      @hub browse -- commit/%(commit)
+bind blame   ;      @hub browse -- commit/%(commit)
+bind diff    ;      @hub browse -- commit/%(commit)
+
+# ; で GitHub の該当ページを開く
+bind tree    ;      @hub browse -- blob/%(branch)/%(file)
+bind blob    ;      @hub browse -- blob/%(branch)/%(file)
+bind grep    ;      @hub browse -- blob/%(branch)/%(file)
+
+# Alt-; で GitHub の指定ブランチの該当ページを開く
+bind tree    <Esc>; @hub browse -- blob/"%(prompt Enter branch name: )"/%(file)
+bind blob    <Esc>; @hub browse -- blob/"%(prompt Enter branch name: )"/%(file)
+bind grep    <Esc>; @hub browse -- blob/"%(prompt Enter branch name: )"/%(file)
+
+# w で GitHub の該当ブランチの Pull Request 作成ページを開く ※要 hub インストール
+bind main    W      @hub browse -- compare/%(branch)?expand=1
+bind diff    W      @hub browse -- compare/%(branch)?expand=1
+bind refs    W      @hub browse -- compare/%(branch)?expand=1
 
 # main ビューでコミットIDを表示
 set main-view = id date author commit-title:graph=yes,refs=yes
@@ -45,3 +67,6 @@ set ignore-case = true
 
 # 差分表示に diff-highlight を使う
 set diff-highlight = true
+
+# 常に --all で起動する
+set main-options = --all
