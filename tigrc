@@ -5,8 +5,11 @@ bind generic G none
 bind generic g move-first-line
 bind generic G move-last-line
 
-# branch ビューで n で git checkout -b
-bind branch n !git checkout -b %{prompt} %{branch}
+# refs ビューで N で git branch
+bind refs N !git branch %(prompt) %(branch)
+
+# main ビューで N で git branch
+bind main N !git branch %(prompt) %(commit)
 
 # main ビューと status ビューで v で git commit
 bind main V !git commit -v --allow-empty
