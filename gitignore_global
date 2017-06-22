@@ -27,3 +27,7 @@ Temporary Items
 
 # vim swap files
 .*.sw*
+
+# IDE
+.idea/
+
