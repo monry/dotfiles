@@ -14,5 +14,7 @@
 	i = "commit --allow-empty -v"
 	c = checkout
 	b = branch
+	m = "merge --no-ff"
 	pl = pull
-	ps = push
+	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD`
+	rp = !git remote prune origin
