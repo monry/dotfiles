@@ -16,6 +16,7 @@
 	b = branch
 	m = "merge --no-ff"
 	d = diff
+	f = fetch
 	pl = pull
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD`
 	rp = !git remote prune origin
