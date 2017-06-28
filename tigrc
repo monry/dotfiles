@@ -70,3 +70,7 @@ set diff-highlight = true
 
 # 常に --all で起動する
 set main-options = --all
+
+# status ビューで Untracked なファイルも表示する
+set status-show-untracked-files = yes
+
