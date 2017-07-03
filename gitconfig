@@ -10,6 +10,7 @@
 	status = auto
 	branch = auto
 [alias]
+	a = add
 	s = status
 	i = "commit --allow-empty -v"
 	c = checkout
