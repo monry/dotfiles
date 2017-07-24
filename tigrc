@@ -9,11 +9,11 @@ bind generic G move-last-line
 bind refs N !git branch "%(prompt Enter branch name: )" %(branch)
 bind refs C !git checkout %(branch)
 
-# main ビューで N で git branch
+# main ビューで N で git branch, C で git checkout -b
 bind main N !git branch "%(prompt Enter branch name: )" %(commit)
 bind main C !git checkout -b "%(prompt Enter branch name: )" %(commit)
 
-# main ビューと status ビューで v で git commit
+# main ビューと status ビューで V で git commit -v
 bind main V !git commit -v --allow-empty
 bind status V !git commit -v --allow-empty
 
