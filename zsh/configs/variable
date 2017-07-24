@@ -2,7 +2,7 @@
 # 環境変数 #
 ############
 
-PATH="$HOME/.bin:$HOME/Developer/bin:.git/safe/../../bin:.git/safe/../../node_modules/.bin:/usr/local/sbin:$PATH"
+PATH="/Applications/Google/Android/sdk/platform-tools:$HOME/.bin:$HOME/Developer/bin:.git/safe/../../bin:.git/safe/../../node_modules/.bin:/usr/local/sbin:$PATH"
 export -U PATH
 
 # vim:set ft=zsh:
