@@ -17,6 +17,9 @@ bind main C !git checkout -b "%(prompt Enter branch name: )" %(commit)
 bind main V !git commit -v --allow-empty
 bind status V !git commit -v --allow-empty
 
+# main ビューで P で git cherry-pick
+bind main P !git cherry-pick %(commit)
+
 # ; で GitHub の該当コミットを開く ※要 hub インストール
 bind main    ;      @hub browse -- commit/%(commit)
 bind blame   ;      @hub browse -- commit/%(commit)
