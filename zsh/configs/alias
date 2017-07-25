@@ -5,4 +5,13 @@
 alias ll='ls -lahG'
 alias vi='vim'
 
+# Docker
+alias dcbu="docker-compose build"
+alias dcst="docker-compose stop"
+alias dcup="docker-compose up"
+alias dcdw="docker-compose down"
+alias dcex="docker-compose exec"
+alias dcps="docker-compose ps"
+alias dclog="docker-compose logs"
+
 # vim:set ft=zsh:
