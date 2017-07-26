@@ -9,6 +9,7 @@ set history=500
 set ruler
 set showcmd
 set incsearch
+set hlsearch
 set laststatus=2
 set modeline
 set modelines=5
