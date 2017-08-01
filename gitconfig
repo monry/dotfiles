@@ -21,3 +21,9 @@
 	pl = pull
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD`
 	rp = !git remote prune origin
+	full-push = !git push --all && git push --tags
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
