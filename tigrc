@@ -19,6 +19,7 @@ bind status V !git commit -v --allow-empty
 
 # main ビューで P で git cherry-pick
 bind main P !git cherry-pick %(commit)
+bind diff P !git cherry-pick %(commit)
 
 # ; で GitHub の該当コミットを開く ※要 hub インストール
 bind main    ;      @hub browse -- commit/%(commit)
