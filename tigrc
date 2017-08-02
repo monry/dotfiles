@@ -5,9 +5,10 @@ bind generic G none
 bind generic g move-first-line
 bind generic G move-last-line
 
-# refs ビューで N で git branch, C で git checkout
+# refs ビューで N で git branch, C で git checkout, D で git update-ref -d
 bind refs N !git branch "%(prompt Enter branch name: )" %(branch)
 bind refs C !git checkout %(branch)
+bind refs D !git update-ref -d %(ref)
 
 # main ビューで N で git branch, C で git checkout -b
 bind main N !git branch "%(prompt Enter branch name: )" %(commit)
