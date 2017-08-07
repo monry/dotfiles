@@ -5,6 +5,8 @@
 	editor = vim
 	precomposeunicode = true
 	excludesfile = ~/.gitignore_global
+[commit]
+	template = ~/.gitmessage
 [color]
 	diff = auto
 	status = auto
@@ -22,6 +24,11 @@
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD`
 	rp = !git remote prune origin
 	full-push = !git push --all && git push --tags
+	lc = !git lfs checkout
+	lf = !git lfs fetch
+	lcl = !git lfs clone
+	lpl = !git lfs pull
+	lps = !git lfs push
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
