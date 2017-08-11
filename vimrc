@@ -13,6 +13,7 @@ set hlsearch
 set laststatus=2
 set modeline
 set modelines=5
+set textwidth=0
 
 " ステータスライン
 set statusline=%<%n:%t\ \<%F\>\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']['.&ft.']'}%=%l,%c%V%8P
