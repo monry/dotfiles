@@ -31,7 +31,8 @@ set shiftround
 set expandtab
 
 " 改行などの不可視文字を表示
-set list listchars=tab:»·,trail:-,eol:↲,extends:»,precedes:«,nbsp:·
+set list
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 highlight SpecialKey ctermfg=240 guibg=NONE guifg=#585858
 highlight NonText ctermfg=66 guibg=NONE guifg=#5f8787
 
@@ -43,5 +44,9 @@ set number
 
 " キーバインド
 map J gJ
+
+" ファイルタイプ別
+"" gitcommit
+autocmd FileType gitcommit setlocal textwidth=0 shiftwidth=2 softtabstop=2 expandtab
 
 " vim:set ft=vim:
