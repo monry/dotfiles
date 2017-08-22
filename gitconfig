@@ -23,6 +23,7 @@
 	pl = pull
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD`
 	rp = !git remote prune origin
+	rf = !CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD` && git fetch origin master:master && git checkout master && git remote prune origin && git branch -d $CURRENT_BRANCH
 	full-push = !git push --all && git push --tags
 	lc = !git lfs checkout
 	lf = !git lfs fetch
