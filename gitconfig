@@ -30,6 +30,7 @@
 	lcl = !git lfs clone
 	lpl = !git lfs pull
 	lps = !git lfs push
+	pr = !hub pull-request
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
