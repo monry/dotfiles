@@ -20,7 +20,7 @@
 	m = "merge --no-ff"
 	d = diff
 	f = fetch
-	pl = pull
+	pl = "!f() { git lfs install --force --skip-smudge && git pull && git lfs pull && git lfs install --force; }; f"
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD`
 	rp = !git remote prune origin
 	rf = !CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD` && git fetch origin master:master && git checkout master && git remote prune origin && git branch -d $CURRENT_BRANCH
@@ -34,7 +34,7 @@
 	checkout-with-lfs = "!f() { git lfs install --force --skip-smudge && git checkout $1 && git lfs pull && git lfs install --force; }; f"
 	pull-with-lfs = "!f() { git lfs install --force --skip-smudge && git pull && git lfs pull && git lfs install --force; }; f"
 [filter "lfs"]
-	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+	required = true
