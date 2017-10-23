@@ -23,7 +23,7 @@
 	pl = pull
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD`
 	rp = !git remote prune origin
-	rf = !CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD` && git fetch origin master:master && git checkout master && git remote prune origin && git branch -d $CURRENT_BRANCH
+	rf = !"f() { if [ -z \"$1\" ]; then ORIGINAL_BRANCH=master; else ORIGINAL_BRANCH=$1; fi && CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD` && git fetch origin $ORIGINAL_BRANCH:$ORIGINAL_BRANCH && git checkout $ORIGINAL_BRANCH && git remote prune origin && git branch -d $CURRENT_BRANCH; }; f"
 	full-push = !git push --all && git push --tags
 	lc = !git lfs checkout
 	lf = !git lfs fetch
@@ -34,8 +34,8 @@
 	checkout-with-lfs = "!f() { git lfs install --force --skip-smudge && git checkout $1 && git lfs pull && git lfs install --force; }; f"
 	pull-with-lfs = "!f() { git lfs install --force --skip-smudge && git pull && git lfs pull && git lfs install --force; }; f"
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge --skip -- %f
-	process = git-lfs filter-process --skip
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 
