@@ -21,7 +21,7 @@
 	d = diff
 	f = fetch
 	pl = pull
-	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD`
+	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD` --tags
 	rp = !git remote prune origin
 	rf = !"f() { if [ -z \"$1\" ]; then ORIGINAL_BRANCH=master; else ORIGINAL_BRANCH=$1; fi && CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD` && git fetch origin $ORIGINAL_BRANCH:$ORIGINAL_BRANCH && git checkout $ORIGINAL_BRANCH && git remote prune origin && git branch -d $CURRENT_BRANCH; }; f"
 	full-push = !git push --all && git push --tags
