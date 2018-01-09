@@ -20,6 +20,7 @@
 	m = "merge --no-ff"
 	d = diff
 	f = fetch
+	t = tag
 	pl = pull
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD` --tags
 	rp = !git remote prune origin
