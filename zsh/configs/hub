@@ -1,0 +1,7 @@
+##########
+# anyenv #
+##########
+
+eval "$(hub alias -s)"
+
+# vim:set ft=zsh:
