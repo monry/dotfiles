@@ -1,0 +1,7 @@
+###########
+# android #
+###########
+
+export PATH=$PATH:~/Library/Android/sdk/tools:~/Library/Android/sdk/platform-tools:~/Library/Android/sdk/build-tools/26.0.1
+
+# vim:set ft=zsh:
