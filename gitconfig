@@ -21,6 +21,7 @@
 	d = diff
 	f = fetch
 	t = tag
+	g = grep
 	pl = pull
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD` --tags
 	rp = !git remote prune origin
