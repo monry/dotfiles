@@ -1,0 +1,4 @@
+# Acts like `git`
+y() {
+    yarn "$@"
+}

@@ -3,6 +3,7 @@
 ########
 
 # 拡張補完機能を有効化
+fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -Uz compinit
 autoload zargs
 compinit
