@@ -33,6 +33,7 @@
 	lpl = !git lfs pull
 	lps = !git lfs push
 	pr = !hub pull-request
+	br = !hub browse
 	checkout-with-lfs = "!f() { git lfs install --force --skip-smudge && git checkout $1 && git lfs pull && git lfs install --force; }; f"
 	pull-with-lfs = "!f() { git lfs install --force --skip-smudge && git pull && git lfs pull && git lfs install --force; }; f"
 [filter "lfs"]
