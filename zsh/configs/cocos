@@ -1,0 +1,14 @@
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT="/Users/monry/Developer/lib"
+export PATH=$COCOS_X_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT="/Users/monry/Developer/lib/cocos2d-x-3.17/templates"
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+export ANDROID_SDK_ROOT="/Users/monry/Library/Android/sdk"
+export PATH=$ANDROID_SDK_ROOT:$PATH
+export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+# vim:set ft=zsh:#

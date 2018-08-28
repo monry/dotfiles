@@ -2,7 +2,11 @@
 # 環境変数 #
 ############
 
-PATH="/Applications/Google/Android/sdk/platform-tools:$HOME/.bin:$HOME/Developer/bin:.git/safe/../../bin:.git/safe/../../node_modules/.bin:/usr/local/sbin:$PATH"
+GOPATH="$HOME/.go"
+COCOS_CONSOLE_ROOT="$HOME/Developer/lib/cocos2d-x-3.17/tools/cocos2d-console/bin"
+PATH="/Applications/Google/Android/sdk/platform-tools:$HOME/.bin:$HOME/Developer/bin:.git/safe/../../bin:.git/safe/../../node_modules/.bin:/usr/local/sbin:$PATH:$HOME/Developer/dotnet/*/bin/Release/netcoreapp2.0/win-x64/publish/:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$COCOS_CONSOLE_ROOT"
+export -U GOPATH
+export -U COCOS_CONSOLE_ROOT
 export -U PATH
 
 # vim:set ft=zsh:
