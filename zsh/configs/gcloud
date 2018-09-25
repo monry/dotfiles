@@ -4,4 +4,9 @@
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
+if [ -d "$HOME/Developer/lib/google-cloud-sdk" ]; then
+    source "$HOME/Developer/lib/google-cloud-sdk/completion.zsh.inc"
+    source "$HOME/Developer/lib/google-cloud-sdk/path.zsh.inc"
+fi
+
 # vim:set ft=zsh:
