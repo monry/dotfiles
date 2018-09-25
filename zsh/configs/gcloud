@@ -1,0 +1,7 @@
+##########
+# gcloud #
+##########
+
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
+# vim:set ft=zsh:
