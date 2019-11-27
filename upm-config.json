@@ -1,0 +1,82 @@
+{
+  "registries": {
+    "upm-packages.dev (upm-packages)": {
+      "name": "Unofficial Unity Package Manager Registry",
+      "protocol": "https",
+      "hostname": "upm-packages.dev",
+      "scopes": [
+        "com.unity.simpleanimation",
+        "com.stevevermeulen",
+        "jp.cysharp",
+        "dev.monry",
+        "dev.upm-packages"
+      ],
+      "unity_version": "2019.2",
+      "author": {
+        "name": "Tetsuya Mori",
+        "url": "https://me.monry.dev/",
+        "email": "monry84@gmail.com"
+      },
+      "license": {
+        "type": "MIT",
+        "url": "https://monry.mit-license.org/license.txt"
+      },
+      "repository": {
+        "type": "git",
+        "user": "",
+        "organization": "upm-packages"
+      },
+      "domain": "dev.upm-packages"
+    },
+    "upm-packages.dev (monry)": {
+      "name": "Unofficial Unity Package Manager Registry",
+      "protocol": "https",
+      "hostname": "upm-packages.dev",
+      "scopes": [
+        "com.unity.simpleanimation",
+        "com.stevevermeulen",
+        "jp.cysharp",
+        "dev.monry",
+        "dev.upm-packages"
+      ],
+      "unity_version": "2019.2",
+      "author": {
+        "name": "Tetsuya Mori",
+        "url": "https://me.monry.dev/",
+        "email": "monry84@gmail.com"
+      },
+      "license": {
+        "type": "MIT",
+        "url": "https://monry.mit-license.org/license.txt"
+      },
+      "repository": {
+        "type": "git",
+        "user": "monry",
+        "organization": ""
+      },
+      "domain": "dev.monry"
+    },
+    "upm.kidsstar.co.jp": {
+      "name": "KidsStar Unity Package Manager Registry",
+      "protocol": "https",
+      "hostname": "upm.kidsstar.local",
+      "scopes": [
+        "jp.co.kidsstar"
+      ],
+      "unity_version": "2019.2",
+      "author": {
+        "name": "KidsStar System Development Team",
+        "url": "https://www.kidsstar.co.jp/",
+        "email": "system@kidsstar.co.jp"
+      },
+      "license": "UNLICENSED",
+      "repository": {
+        "type": "git",
+        "user": "",
+        "organization": "kidsstar"
+      },
+      "domain": "jp.co.kidsstar.upm"
+    }
+  }
+}
+
