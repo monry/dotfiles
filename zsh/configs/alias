@@ -13,5 +13,12 @@ alias dcdw="docker-compose down"
 alias dcex="docker-compose exec"
 alias dcps="docker-compose ps"
 alias dclog="docker-compose logs"
+alias dcru="docker-compose run"
+
+# NuGet
+alias nuget="mono /usr/local/bin/nuget.exe"
+
+# Chrome
+alias chrome='open -a "Google Chrome" $1'
 
 # vim:set ft=zsh:

@@ -29,8 +29,8 @@ function rprompt-git-current-branch {
 	echo "%{$color%}$name%{$reset_color%} "
 }
 
-PROMPT='%{[$[32+$RANDOM % 5]m%}%B$HOST'" `whoami` %b%#%{[m%}%u "
-RPROMPT='%{[33m%}[%{[m%}`rprompt-git-current-branch`%{[33m%}%~ %D{%H:%M:%S}]%{[m%}'
+PROMPT='%{[$[32+$RANDOM % 5]m%}%B[%D{%H:%M:%S}]'" %b%#%{[m%}%u "
+#RPROMPT='%{[33m%}[%{[m%}%{[33m%}%~ %D{%H:%M:%S}]%{[m%}'
 setopt prompt_subst
 
 # vim:set ft=zsh:
