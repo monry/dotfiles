@@ -4,7 +4,8 @@
 [core]
 	editor = vim
 	precomposeunicode = true
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/monry/.gitignore_global
+	commentchar = ";"
 [commit]
 	template = ~/.gitmessage
 [color]
@@ -16,10 +17,11 @@
 	s = status
 	i = "commit --allow-empty -v"
 	c = checkout
+	sw = switch
 	b = branch
 	m = "merge --no-ff"
 	d = diff
-	f = fetch
+	f = "fetch --tags"
 	t = tag
 	g = grep
 	pl = pull
@@ -34,6 +36,8 @@
 	lps = !git lfs push
 	pr = !hub pull-request
 	br = !hub browse
+	hash = !git rev-parse HEAD | tr -d '\n'
+	ha = !git rev-parse HEAD | tr -d '\n' | pbcopy
 	checkout-with-lfs = "!f() { git lfs install --force --skip-smudge && git checkout $1 && git lfs pull && git lfs install --force; }; f"
 	pull-with-lfs = "!f() { git lfs install --force --skip-smudge && git pull && git lfs pull && git lfs install --force; }; f"
 [filter "lfs"]
@@ -41,4 +45,7 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-
+[init]
+	templatedir = ~/.git_template
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh
