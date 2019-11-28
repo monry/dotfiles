@@ -1,0 +1,31 @@
+#!/bin/bash
+
+function convert_png_to_icns() {
+  extension=${1##*.}
+
+  if [ $extension != "png" ]; then
+    echo 'Suffix needs to "png"' 1>&2
+
+    return 1
+  fi
+
+  if [ $# -eq 2 ]; then
+    mkdir -p "$2.iconset"
+    sips -Z 1024 "$1" -o "$2.iconset/icon_512x512@2x.png"
+    sips -Z 512 "$1" -o "$2.iconset/icon_512x512.png"
+    sips -Z 512 "$1" -o "$2.iconset/icon_256x256@2x.png"
+    sips -Z 256 "$1" -o "$2.iconset/icon_256x256.png"
+    sips -Z 256 "$1" -o "$2.iconset/icon_128x128@2x.png"
+    sips -Z 128 "$1" -o "$2.iconset/icon_128x128.png"
+    sips -Z 64 "$1" -o "$2.iconset/icon_32x32@2x.png"
+    sips -Z 32 "$1" -o "$2.iconset/icon_32x32.png"
+    sips -Z 32 "$1" -o "$2.iconset/icon_16x16@2x.png"
+    sips -Z 16 "$1" -o "$2.iconset/icon_16x16.png"
+    iconutil -c icns "$2.iconset"
+  else
+    echo "usage: convert_png_to_icns png_path output_path" 1>&2
+
+    return 1
+  fi
+}
+

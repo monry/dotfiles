@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function urldecode() {
+  if [ $# -eq 1 ]; then
+    bash -c "echo \"$1\" | nkf -w --url-input"
+  else
+    echo "usage: urldecode urlencoded_text" 1>&2
+
+    return 1
+  fi
+}

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function urlencode() {
+  if [ $# -eq 1 ]; then
+    bash -c "echo \"$1\" | nkf -WwMQ | tr = % | perl -pe 's/%\n//'"
+  else
+    echo "usage: urlencode plain_text" 1>&2
+
+    return 1
+  fi
+}
