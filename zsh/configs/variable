@@ -3,8 +3,6 @@
 ############
 
 GOPATH="$HOME/.go"
-PATH="/Applications/Google/Android/sdk/platform-tools:$HOME/.bin:$HOME/Developer/bin:.git/safe/../../bin:.git/safe/../../node_modules/.bin:/usr/local/sbin:$HOME/.pyenv/shims:$PATH:$HOME/Developer/dotnet/*/bin/Release/netcoreapp2.0/win-x64/publish/:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
 export -U GOPATH
-export -U PATH
 
 # vim:set ft=zsh:

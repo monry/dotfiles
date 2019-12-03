@@ -1,0 +1,3 @@
+if [ -e $HOME/Developer/lib/google-cloud-sdk/completion.zsh.inc ]; then
+  source $HOME/Developer/lib/google-cloud-sdk/completion.zsh.inc
+fi
