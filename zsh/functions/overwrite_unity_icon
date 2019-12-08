@@ -1,0 +1,19 @@
+#!/bin/bash
+
+function overwrite_unity_icon() {
+  version=$1
+
+  if [ -z "${version}" ]; then
+    echo "Please specify Unity version."
+
+    return 1
+  fi
+
+  if [ ! -e /Applications/Unity/Hub/Editor/${version}/Unity.app ]; then
+    echo "Unity ${version} does not installed in '/Applications/Unity/Hub/Editor/'. Please install Unity ${version} using Unity Hub."
+
+    return 1
+  fi
+
+  convert_png_to_icns $HOME/iCloud\ Drive/Documents/Images/アイコン/Unity.png $HOME/iCloud\ Drive/Documents/Images/アイコン/Unity && mv $HOME/iCloud\ Drive/Documents/Images/アイコン/Unity.icns /Applications/Unity/Hub/Editor/${version}/Unity.app/Contents/Resources/UnityAppIcon.icns
+}
