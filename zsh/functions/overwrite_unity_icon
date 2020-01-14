@@ -15,5 +15,9 @@ function overwrite_unity_icon() {
     return 1
   fi
 
-  convert_png_to_icns $HOME/iCloud\ Drive/Documents/Images/アイコン/Unity.png $HOME/iCloud\ Drive/Documents/Images/アイコン/Unity && mv $HOME/iCloud\ Drive/Documents/Images/アイコン/Unity.icns /Applications/Unity/Hub/Editor/${version}/Unity.app/Contents/Resources/UnityAppIcon.icns
+  if [ ! -e $HOME/Documents/Images/Icons/Unity.iconset -o ! -f $HOME/Documents/Images/Icons/Unity.icns ]; then
+    convert_png_to_icns $HOME/Documents/Images/Icons/Unity.png $HOME/Documents/Images/Icons/Unity
+  fi
+
+   cp $HOME/Documents/Images/Icons/Unity.icns /Applications/Unity/Hub/Editor/${version}/Unity.app/Contents/Resources/UnityAppIcon.icns
 }
