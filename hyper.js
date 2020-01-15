@@ -10,19 +10,7 @@ module.exports = {
 
     // window background opacity
     opacity: 0.85,
-//    opacity: 1,
 
-//    summon: {
-//      hideDock: false,
-//      hideOnBlur: false,
-//      hotkey: 'Ctrl+T'
-//    },
-//    visor: {
-//      hotkey: 'Ctrl+T',
-//      position: 'right', // or left, right, bottom
-//      width: 1800, // Optional, defaults to half of viewable area for horizontal positions, 100% for vertical
-//      height: 900, // Optional, defaults to half of viewable area for vertical positions, 100% for horizontal
-//    },
     overlay: {
       alwaysOnTop: true,
       animate: true,
@@ -34,7 +22,7 @@ module.exports = {
         close: ['Option+Escape'], // On MacOS hotkey is default to Option + Escape!
       },
       position: 'topRight',
-      primaryDisplay: false,
+      primaryDisplay: true,
       resizable: true,
       size: {
         width: 0.6,
@@ -195,8 +183,6 @@ module.exports = {
     "hyper-highlight-active-pane",
     "hyper-tab-icons-plus",
     "hyper-search",
-//    "hyperterm-summon",
-//    "hyperterm-visor",
     "hyperlinks",
     "hyper-overlay",
     "hyper-dracula"
