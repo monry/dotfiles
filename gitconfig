@@ -36,6 +36,7 @@
 	lps = !git lfs push
 	pr = !hub pull-request
 	br = !hub browse
+	re = !hub release
 	hash = !git rev-parse HEAD | tr -d '\n'
 	ha = !git rev-parse HEAD | tr -d '\n' | pbcopy
 	checkout-with-lfs = "!f() { git lfs install --force --skip-smudge && git checkout $1 && git lfs pull && git lfs install --force; }; f"

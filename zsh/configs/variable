@@ -2,7 +2,20 @@
 # 環境変数 #
 ############
 
-GOPATH="$HOME/.go"
+# golang
+
+GOPATH="$HOME/Developer/go"
 export -U GOPATH
+
+export PATH="$PATH:$GOPATH/bin"
+
+export GO111MODULE=on
+
+# direnv
+
+if type "direnv" > /dev/null 2>&1; then
+    export EDITOR=vim
+    eval "$(direnv hook zsh)"
+fi
 
 # vim:set ft=zsh:

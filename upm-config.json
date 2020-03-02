@@ -26,6 +26,10 @@
         "user": "",
         "organization": "upm-packages"
       },
+      "publish": {
+        "protocol": "https",
+        "hostname": "upm-packages.dev"
+      },
       "domain": "dev.upm-packages"
     },
     "upm-packages.dev (monry)": {
@@ -54,6 +58,10 @@
         "user": "monry",
         "organization": ""
       },
+      "publish": {
+        "protocol": "https",
+        "hostname": "upm-packages.dev"
+      },
       "domain": "dev.monry"
     },
     "upm.kidsstar.co.jp": {
@@ -74,6 +82,10 @@
         "type": "git",
         "user": "",
         "organization": "kidsstar"
+      },
+      "publish": {
+        "protocol": "https",
+        "hostname": "upm.kidsstar.co.jp"
       },
       "domain": "jp.co.kidsstar.upm"
     }
