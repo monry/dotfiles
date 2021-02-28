@@ -1,9 +1,14 @@
 #!/bin/bash
 
 function overwrite_unityhub_icon() {
-  if [ ! -e $HOME/Documents/Images/Icons/Unity\ Hub.iconset -o ! -f $HOME/Documents/Images/Icons/Unity\ Hub.icns ]; then
-    convert_png_to_icns $HOME/Documents/Images/Icons/Unity\ Hub.png $HOME/Documents/Images/Icons/Unity\ Hub
+  base_dir="${HOME}/Library/Mobile Documents/com~apple~CloudDocs/Documents/Images/Icons"
+
+  if [ ! -e $base_dir/Unity\ Hub.iconset -o ! -f $base_dir/Unity\ Hub.icns ]; then
+      convert_png_to_icns $base_dir/Unity\ Hub.png $base_dir/Unity\ Hub
   fi
 
-  cp $HOME/Documents/Images/Icons/Unity\ Hub.icns /Applications/Unity\ Hub.app/Contents/Resources/Unity\ Hub.icns
+  cp $base_dir/Unity\ Hub.icns /Applications/Unity\ Hub.app/Contents/Resources/Unity\ Hub.icns
+  sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \; 2>/dev/null
+  sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \; 2>/dev/null
+  killall Dock
 }

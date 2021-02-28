@@ -5,9 +5,12 @@
       "protocol": "https",
       "hostname": "upm-packages.dev",
       "scopes": [
+        "com.google",
         "com.unity.simpleanimation",
         "com.stevevermeulen",
+        "com.cysharp",
         "jp.cysharp",
+        "jp.hadashikick",
         "dev.monry",
         "dev.upm-packages"
       ],
@@ -37,9 +40,12 @@
       "protocol": "https",
       "hostname": "upm-packages.dev",
       "scopes": [
+        "com.google",
         "com.unity.simpleanimation",
         "com.stevevermeulen",
+        "com.cysharp",
         "jp.cysharp",
+        "jp.hadashikick",
         "dev.monry",
         "dev.upm-packages"
       ],
@@ -67,7 +73,7 @@
     "upm.kidsstar.co.jp": {
       "name": "KidsStar Unity Package Manager Registry",
       "protocol": "https",
-      "hostname": "upm.kidsstar.local",
+      "hostname": "upm.kidsstar.co.jp",
       "scopes": [
         "jp.co.kidsstar"
       ],

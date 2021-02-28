@@ -2,6 +2,7 @@
 
 function overwrite_unity_icon() {
   version=$1
+  base_dir="${HOME}/Library/Mobile Documents/com~apple~CloudDocs/Documents/Images/Icons"
 
   if [ -z "${version}" ]; then
     echo "Please specify Unity version."
@@ -15,9 +16,14 @@ function overwrite_unity_icon() {
     return 1
   fi
 
-  if [ ! -e $HOME/Documents/Images/Icons/Unity.iconset -o ! -f $HOME/Documents/Images/Icons/Unity.icns ]; then
-    convert_png_to_icns $HOME/Documents/Images/Icons/Unity.png $HOME/Documents/Images/Icons/Unity
+  if [ ! -e $base_dir/Unity.iconset -o ! -f $base_dir/Unity.icns ]; then
+    convert_png_to_icns $base_dir/Unity.png $base_dir/Unity
   fi
 
-   cp $HOME/Documents/Images/Icons/Unity.icns /Applications/Unity/Hub/Editor/${version}/Unity.app/Contents/Resources/UnityAppIcon.icns
+  cp $base_dir/Unity.png /Applications/Unity/Hub/Editor/${version}/Unity.app/Contents/Resources/LargeUnityIcon.png
+  cp $base_dir/Unity.icns /Applications/Unity/Hub/Editor/${version}/Unity.app/Contents/Resources/UnityAppIcon.icns
+
+  sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \; 2>/dev/null
+  sudo find /private/var/folders/ -name com.apple.iconservices -exec rm -rf {} \; 2>/dev/null
+  killall Dock
 }

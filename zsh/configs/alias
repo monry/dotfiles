@@ -2,8 +2,9 @@
 # エイリアス #
 ##############
 
-alias ll='ls -lahG'
+alias ll='exa -laBgh --icons --git --time-style long-iso'
 alias vi='vim'
+alias cat='bat'
 
 # Docker
 alias dcbu="docker-compose build"
@@ -20,5 +21,13 @@ alias nuget="mono /usr/local/bin/nuget.exe"
 
 # Chrome
 alias chrome='open -a "Google Chrome" $1'
+
+# Change Directory
+alias booth='cd ~/Developer/git/kidsstar/booth'
+alias sandbox='cd ~/Developer/git/pretendland/sandbox'
+alias pretendland='cd ~/Developer/git/pretendland/pretendland'
+alias cnexco='cd ~/Developer/git/pretendland/cnexco'
+alias slime='cd ~/Developer/git/kidsstar/PlayWithSlime'
+alias zenn='cd ~/Developer/git/monry/Zenn'
 
 # vim:set ft=zsh:

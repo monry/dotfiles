@@ -13,7 +13,7 @@ module.exports = {
 
     overlay: {
       alwaysOnTop: true,
-      animate: false,
+      animate: true,
       hasShadow: false,
       hideDock: true,
       hideOnBlur: true,
@@ -25,7 +25,7 @@ module.exports = {
       primaryDisplay: true,
       resizable: true,
       size: {
-        width: 0.6,
+        width: 0.8,
         height: 1.0
       },
       startAlone: true,
@@ -39,7 +39,7 @@ module.exports = {
     },
 
     // default font size in pixels for all tabs
-    fontSize: 14,
+    fontSize: 16,
 
     // font family with optional fallbacks
     fontFamily: 'Cica, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',

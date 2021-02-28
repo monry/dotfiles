@@ -24,6 +24,7 @@
 	f = "fetch --tags"
 	t = tag
 	g = grep
+	cp = cherry-pick
 	pl = pull
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD` --tags
 	rp = !git remote prune origin
@@ -39,8 +40,11 @@
 	re = !hub release
 	hash = !git rev-parse HEAD | tr -d '\n'
 	ha = !git rev-parse HEAD | tr -d '\n' | pbcopy
+    todo = !git grep TODO
 	checkout-with-lfs = "!f() { git lfs install --force --skip-smudge && git checkout $1 && git lfs pull && git lfs install --force; }; f"
 	pull-with-lfs = "!f() { git lfs install --force --skip-smudge && git pull && git lfs pull && git lfs install --force; }; f"
+    current-branch = symbolic-ref --short HEAD
+    base-branch = !git config "branch.$(git current-branch).base"
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -50,3 +54,13 @@
 	templatedir = ~/.git_template
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
+[grep]
+	lineNumber = true
+[pull]
+    rebase = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
