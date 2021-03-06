@@ -24,7 +24,7 @@ alias chrome='open -a "Google Chrome" $1'
 
 # Change Directory
 alias booth='cd ~/Developer/git/kidsstar/booth'
-alias sandbox='cd ~/Developer/git/pretendland/sandbox'
+alias sandbox='cd ~/Developer/git/sandbox'
 alias pretendland='cd ~/Developer/git/pretendland/pretendland'
 alias cnexco='cd ~/Developer/git/pretendland/cnexco'
 alias slime='cd ~/Developer/git/kidsstar/PlayWithSlime'
