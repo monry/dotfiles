@@ -3,13 +3,13 @@
 ##############
 
 # git ディレクトリに居る場合に、現在のブランチ名を表示する
-function rprompt-git-current-branch {
+function git-current-branch {
 	local name st color
 
 	if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
 		return
 	fi
-	name=$(basename "`git symbolic-ref HEAD 2> /dev/null`")
+	name=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 	if [[ -z $name ]]; then
 		return
 	fi
@@ -26,11 +26,11 @@ function rprompt-git-current-branch {
 
 	# %{...%} は囲まれた文字列がエスケープシーケンスであることを明示する
 	# これをしないと右プロンプトの位置がずれる
-	echo "%{$color%}$name%{$reset_color%} "
+	echo "%{$color%}($name)%{$reset_color%} "
 }
 
-PROMPT='%{[$[32+$RANDOM % 5]m%}%B[%D{%H:%M:%S}]'" %b%#%{[m%}%u "
-#RPROMPT='%{[33m%}[%{[m%}%{[33m%}%~ %D{%H:%M:%S}]%{[m%}'
+PROMPT='%{[$[32+$RANDOM % 5]m%}[%D{%H:%M:%S}]'" %#%{[m%}%u "
+RPROMPT='%{[33m%}[%B$(git-current-branch)%b%{[m%}%{[33m%}%~]%{[m%}'
 setopt prompt_subst
 
 # vim:set ft=zsh:
