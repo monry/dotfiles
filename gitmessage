@@ -1,0 +1,18 @@
+
+
+; :beetle:           バグ、エラーの修正
+; :recycle:          リファクタリング！（機能は全く同じ。機能追加ではない!）
+; :shirt:            コードスタイルの修正（リファクタリングではない!）
+; :wrench:           表示位置・レイヤーの調整
+; :memo:             ドキュメントの変更
+; :microscope:       実験的
+; :art:              アートワークの変更・入れ替え
+; :truck:            ディレクトリの移動
+; :name_badge:       名前の変更
+; :new:              Assetの追加、Generate。ファイルの追加
+; :clipboard:        configの追加、修正
+; :sparkles:         New feature！
+; :tada:             Big feature！
+; :seedling:         Initial Commit
+; :fire:             ファイルの削除
+; :white_check_mark: テストコード
