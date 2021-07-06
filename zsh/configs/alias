@@ -23,11 +23,15 @@ alias nuget="mono /usr/local/bin/nuget.exe"
 alias chrome='open -a "Google Chrome" $1'
 
 # Change Directory
-alias booth='cd ~/Developer/git/kidsstar/booth'
-alias sandbox='cd ~/Developer/git/pretendland/sandbox'
+alias booth='cd ~/Developer/git/kidsstar/PretendLand.Booth'
+alias sandbox='cd ~/Developer/git/sandbox'
+alias sandbox-booth='cd ~/Developer/git/sandbox/Booth'
 alias pretendland='cd ~/Developer/git/pretendland/pretendland'
+alias legacy='cd ~/Developer/git/kidsstar/pretendland_legacy_modules'
 alias cnexco='cd ~/Developer/git/pretendland/cnexco'
+alias jal='cd ~/Developer/git/pretendland/jal'
 alias slime='cd ~/Developer/git/kidsstar/PlayWithSlime'
 alias zenn='cd ~/Developer/git/monry/Zenn'
+alias gbg='cd ~/Developer/git/monry/GameBuilderGarage'
 
 # vim:set ft=zsh:
