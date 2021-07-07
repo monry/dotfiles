@@ -23,7 +23,6 @@ alias nuget="mono /usr/local/bin/nuget.exe"
 alias chrome='open -a "Google Chrome" $1'
 
 # Change Directory
-<<<<<<< HEAD
 alias booth='cd ~/Developer/git/kidsstar/PretendLand.Booth'
 alias sandbox='cd ~/Developer/git/sandbox'
 alias sandbox-booth='cd ~/Developer/git/sandbox/Booth'
