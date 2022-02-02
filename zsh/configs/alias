@@ -34,4 +34,7 @@ alias slime='cd ~/Developer/git/kidsstar/PlayWithSlime'
 alias zenn='cd ~/Developer/git/monry/Zenn'
 alias gbg='cd ~/Developer/git/monry/GameBuilderGarage'
 
+# Python
+alias pyvenv='python3 -m venv .venv && source .venv/bin/activate'
+
 # vim:set ft=zsh:
