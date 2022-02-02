@@ -10,3 +10,5 @@ for directory in $directories; do
 done
 
 # vim:set ft=zsh:
+
+export PATH="$HOME/.poetry/bin:$PATH"

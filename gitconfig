@@ -22,7 +22,7 @@
 	b = branch
 	m = "merge --no-ff"
 	d = diff
-	f = "fetch --tags"
+	f = "fetch --tags --prune"
 	t = tag
 	g = grep
 	cp = cherry-pick
