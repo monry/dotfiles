@@ -4,7 +4,6 @@
 [core]
 	editor = vim
 	precomposeunicode = true
-	excludesfile = /Users/monry/.gitignore_global
 	commentchar = ";"
 	autocrlf = input
 [commit]
@@ -30,15 +29,16 @@
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD` --tags
 	rp = !git remote prune origin
 	rf = !"f() { if [ -z \"$1\" ]; then ORIGINAL_BRANCH=$(git remote show origin | grep 'HEAD branch' | awk '{print $NF}'); else ORIGINAL_BRANCH=$1; fi && CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD` && git fetch origin $ORIGINAL_BRANCH:$ORIGINAL_BRANCH && git fetch origin && git checkout $ORIGINAL_BRANCH && git remote prune origin && git branch -d $CURRENT_BRANCH; }; f"
+	fo = !"f() { if [ -z \"$1\" ]; then ORIGINAL_BRANCH=$(git remote show origin | grep 'HEAD branch' | awk '{print $NF}'); else ORIGINAL_BRANCH=$1; fi && CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD` && git fetch origin && git fetch origin $ORIGINAL_BRANCH:$ORIGINAL_BRANCH && git remote prune origin; }; f"
 	full-push = !git push --all && git push --tags
 	lc = !git lfs checkout
 	lf = !git lfs fetch
 	lcl = !git lfs clone
 	lpl = !git lfs pull
 	lps = !git lfs push
-	pr = !hub pull-request
-	br = !hub browse
-	re = !hub release
+	pr = !gh pr
+	br = !gh browse
+	re = !gh release
 	hash = !git rev-parse HEAD | tr -d '\n'
 	ha = !git rev-parse HEAD | tr -d '\n' | pbcopy
     todo = !git grep TODO
@@ -53,6 +53,7 @@
 	process = git-lfs filter-process
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = main
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
 [grep]

@@ -37,4 +37,7 @@ alias gbg='cd ~/Developer/git/monry/GameBuilderGarage'
 # Python
 alias pyvenv='python3 -m venv .venv && source .venv/bin/activate'
 
+# DocFx
+alias docfx='mono ~/Developer/src/docfx/docfx.exe'
+
 # vim:set ft=zsh:

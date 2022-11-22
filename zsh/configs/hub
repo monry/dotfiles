@@ -1,7 +1,7 @@
 ##########
-# anyenv #
+# GitHub #
 ##########
 
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 
 # vim:set ft=zsh:

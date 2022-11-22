@@ -20,7 +20,7 @@ set statusline=%<%n:%t\ \<%F\>\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']
 
 " Syntax highlight
 syntax on
-colorscheme ron
+colorscheme default
 
 " インデント関連
 filetype plugin indent on
