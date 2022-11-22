@@ -1,4 +1,0 @@
-# y コマンドを yarn コマンドだと認識させる
-compdef y=yarn
-
-# vim:set ft=zsh:
