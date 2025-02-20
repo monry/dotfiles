@@ -7,14 +7,16 @@ alias vi='vim'
 alias cat='bat'
 
 # Docker
-alias dcbu="docker-compose build"
-alias dcst="docker-compose stop"
-alias dcup="docker-compose up -d"
-alias dcdw="docker-compose down"
-alias dcex="docker-compose exec"
-alias dcps="docker-compose ps"
-alias dclog="docker-compose logs"
-alias dcru="docker-compose run"
+alias dcbu="docker compose build"
+alias dcs="docker compose start"
+alias dcre="docker compose restart"
+alias dcst="docker compose stop"
+alias dcup="docker compose up -d"
+alias dcdw="docker compose down"
+alias dcex="docker compose exec"
+alias dcps="docker compose ps"
+alias dclog="docker compose logs"
+alias dcru="docker compose run"
 
 # NuGet
 alias nuget="mono /usr/local/bin/nuget.exe"

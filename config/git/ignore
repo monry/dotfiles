@@ -33,3 +33,6 @@ Temporary Items
 .idea/
 .vscode/
 *.csproj.DotSettings
+
+# direnv
+.direnv/

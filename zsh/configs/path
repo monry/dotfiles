@@ -14,7 +14,14 @@ PATH="/Applications/Google/Android/sdk/platform-tools:$PATH"
 PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 PATH="/usr/local/opt/qt/bin:$PATH"
 PATH="/usr/local/opt/python/libexec/bin:$PATH"
+PATH="/opt/homebrew/bin:$PATH"
 PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+PATH="/Users/monry/Library/Python/3.9/bin:$PATH"
+PATH="/Users/monry/.local/bin:$PATH"
+PATH="/opt/poetry/bin:$PATH"
+PATH="/Users/monry/.azure/bin:$PATH"
+PATH="$HOME/.rbenv/bin:$PATH"
+PATH="$HOME/.anyenv/envs/nodenv/bin:$PATH"
 
 export -U PATH
 

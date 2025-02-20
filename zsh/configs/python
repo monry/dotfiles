@@ -1,0 +1,9 @@
+##########
+# Python #
+##########
+
+# h5py インストール時にエラーになる問題を回避
+export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
+export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
+export HDF5_DIR="/opt/homebrew/opt/hdf5"
+export OPENBLAS="/opt/homebrew/opt/openblas"

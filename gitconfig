@@ -39,13 +39,19 @@
 	pr = !gh pr
 	br = !gh browse
 	re = !gh release
-	hash = !git rev-parse HEAD | tr -d '\n'
+	ppm = !git-pr-create-merge && git remote prune origin
+	smu = "submodule update"
+	smur = "submodule update --remote"
+	smp = "submodule foreach git pull"
+	hash = !"f() { if [ -z \"$1\" ]; then git rev-parse HEAD; elif [ \"$1\" == \"-c\" ]; then git rev-parse HEAD | tr -d '\n' | pbcopy; fi; }; f"
 	ha = !git rev-parse HEAD | tr -d '\n' | pbcopy
-    todo = !git grep TODO
+	todo = !git grep TODO
 	checkout-with-lfs = "!f() { git lfs install --force --skip-smudge && git checkout $1 && git lfs pull && git lfs install --force; }; f"
 	pull-with-lfs = "!f() { git lfs install --force --skip-smudge && git pull && git lfs pull && git lfs install --force; }; f"
-    current-branch = symbolic-ref --short HEAD
-    base-branch = !git config "branch.$(git current-branch).base"
+	current-branch = symbolic-ref --short HEAD
+	base-branch = !git config "branch.$(git current-branch).base"
+	ignore = !curl -L -s https://www.gitignore.io/api/$@
+    empty = !"f() { COMMIT_MESSAGE=${2:-\":u7a7a: Add empty commit\"}; git commit --allow-empty -m \"[MONRY-$1] ${COMMIT_MESSAGE}\"; }; f"
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
