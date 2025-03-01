@@ -1,0 +1,88 @@
+Host build-server-01
+  Hostname 192.168.99.100
+  User ks
+  IdentityFile ~/.ssh/id_rsa
+
+Host build-server-02
+  Hostname 192.168.99.200
+  User ks
+  IdentityFile ~/.ssh/id_rsa
+
+Host build-server-03
+  Hostname 192.168.99.201
+  User ks
+  IdentityFile ~/.ssh/id_rsa
+
+Host build-server-04
+  Hostname 192.168.99.202
+  User ks
+  IdentityFile ~/.ssh/id_rsa
+
+Host bastion
+  User monry
+  Hostname 52.69.201.122
+
+Host app-base
+  User monry
+  Hostname 172.16.1.40
+  ProxyCommand ssh -W %h:%p bastion 2>/dev/null
+
+Host demo-01
+  User monry
+  Hostname 10.1.3.172
+  ProxyCommand ssh -W %h:%p bastion 2>/dev/null
+
+Host www-03
+  User monry
+  Hostname 10.0.1.101
+  ProxyCommand ssh -W %h:%p bastion 2>/dev/null
+
+Host repository
+  User monry
+  Hostname 10.0.1.28
+  ProxyCommand ssh -W %h:%p bastion 2>/dev/null
+
+Host brain-exercise-01
+  User monry
+  Hostname 172.16.1.211
+  ProxyCommand ssh -W %h:%p bastion 2>/dev/null
+
+Host brain-exercise-02
+  User monry
+  Hostname 172.16.3.143
+  ProxyCommand ssh -W %h:%p bastion 2>/dev/null
+
+Host repository
+  User monry
+  Hostname 10.0.1.28
+  ProxyCommand ssh -W %h:%p bastion 2>/dev/null
+
+Host stg-01
+  User monry
+  Hostname 10.121.36.58
+  ProxyCommand ssh -W %h:%p app-base 2>/dev/null
+
+Host bat-01
+  User monry
+  Hostname 10.126.44.79
+  ProxyCommand ssh -W %h:%p app-base 2>/dev/null
+
+Host rep-01
+  User monry
+  Hostname 10.125.149.74
+  ProxyCommand ssh -W %h:%p app-base 2>/dev/null
+
+Host git.kidsstar.co.jp
+  User git
+
+Host bastion.canvas.office
+  Hostname 192.168.99.202
+  User ks
+  IdentityFile ~/.ssh/id_rsa.canvas
+
+Host canvas
+  User azureuser
+  Hostname 20.18.244.10
+  IdentityFile ~/.ssh/id_rsa.canvas
+  ProxyCommand ssh -W %h:%p bastion.canvas.office
+

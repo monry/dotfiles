@@ -1,0 +1,4 @@
+Host chorkyrie.com
+  Hostname 59.106.19.62
+  User chorkyrie
+  IdentityFile ~/.ssh/id_ed25519.chorkyrie.pem
