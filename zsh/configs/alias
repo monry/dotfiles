@@ -2,7 +2,7 @@
 # エイリアス #
 ##############
 
-alias ll='exa -laBgh --icons --git --time-style long-iso'
+alias ll='eza -laBgh --icons --git --time-style long-iso'
 alias vi='vim'
 alias cat='bat'
 
