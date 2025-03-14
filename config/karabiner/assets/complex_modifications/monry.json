@@ -2,7 +2,7 @@
   "title": "Customized by @monry",
   "rules": [
     {
-      "description": "左 option を2回空打ちで Warp トグル",
+      "description": "option を2回空打ちで Warp トグル",
       "manipulators": [
         {
           "type": "basic",
@@ -70,6 +70,79 @@
             {
               "type": "variable_if",
               "name": "left_option_key",
+              "value": 0
+            }
+          ],
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 300
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_option"
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": [
+                "left_shift",
+                "left_command",
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "right_option_key",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "right_option_key",
+                "value": 1
+              }
+            },
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "right_option_key",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "right_option_key",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "right_option_key",
               "value": 0
             }
           ],

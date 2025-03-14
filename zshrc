@@ -2,6 +2,7 @@ if [ -x /usr/libexec/path_helper ]; then
     eval `/usr/libexec/path_helper -s`
 fi
 
+source ~/.zsh/configs/path
 directories=(functions configs completions)
 for directory in $directories; do
 	for _zsh in ~/.zsh/$directory/*; do
@@ -36,3 +37,7 @@ fpath=(/Users/monry/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+if [ -f '/Users/monry/.secrets/env' ]; then
+  source '/Users/monry/.secrets/env'
+fi
