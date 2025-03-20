@@ -5,6 +5,7 @@
 alias ll='eza -laBgh --icons --git --time-style long-iso'
 alias vi='vim'
 alias cat='bat'
+alias g="git"
 
 # Docker
 alias dcbu="docker compose build"

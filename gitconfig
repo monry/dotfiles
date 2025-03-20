@@ -24,6 +24,8 @@
 	f = "fetch --tags --prune"
 	t = tag
 	g = grep
+	s = status
+	st = status
 	cp = cherry-pick
 	pl = pull
 	ps = !git push -u origin `git rev-parse --abbrev-ref HEAD` --tags
